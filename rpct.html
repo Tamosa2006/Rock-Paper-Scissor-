@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rpct.css">
+</head>
+<body>
+
+    <h1>Rock Paper Scissors</h1>
+
+    <script>
+        let totalRounds = parseInt(prompt("Enter the number of rounds you want to play: "), 10);
+        if (isNaN(totalRounds) || totalRounds <= 0) {
+            totalRounds = 5; // Default value
+        }
+        localStorage.setItem("totalRounds", totalRounds);
+    </script>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+        <p>Player Score: <span id="player-score">0</span></p>
+        <p>Computer Score: <span id="computer-score">0</span></p>
+        <p>Ties: <span id="tie-score">0</span></p> 
+        <p>Rounds Left: <span id="rounds-left"></span></p>
+    </div>
+
+    <!-- Choices -->
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="./pictures/rock.png">
+        </div>
+        <div class="choice" id="paper">
+            <img src="./pictures/paper.png">
+        </div>
+        <div class="choice" id="scissor">
+            <img src="./pictures/scissor.png">
+        </div>
+    </div>
+
+    <div class="choices-display">
+        <p>You chose:</p>
+        <img id="user-choice-img" src="" alt="User Choice" width="100">
+        <p>Computer chose:</p>
+        <img id="computer-choice-img" src="" alt="Computer Choice" width="100">
+    </div>
+
+    <p id="result"></p>
+
+    <script src="rpct.js"></script>
+  
+    <button id="exit-btn">Exit to Main Page</button>
+
+</body>
+</html>

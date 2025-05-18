@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your Name" required />
+    <button onclick="login()">Play With Us</button>
+  </div>
+  
+  <script>
+    function login() {
+      let name = document.getElementById("username").value;
+      if (name.trim() !== "") {
+        localStorage.setItem("username", name);
+        window.location.href = "index.html"; // Redirect to your carousel page
+      } else {
+        alert("Please enter your name!");
+      }
+    }
+  </script>
+  <script>
+  function login() {
+    let name = document.getElementById("username").value;
+    if (name.trim() !== "") {
+      localStorage.setItem("username", name);
+      window.location.href = "structure.html"; // Redirect to the carousel page
+    } else {
+      alert("Please enter your name!");
+    }
+  }
+</script>
+
+
+
+  
+</body>
+</html>

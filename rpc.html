@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rpc.css">
+</head>
+<body>
+
+    <h1>Rock Paper Scissors</h1>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+        <p>Player Score: <span id="player-score">0</span></p>
+        <p>Computer Score: <span id="computer-score">0</span></p>
+        <p>Ties: <span id="tie-score">0</span></p> 
+    </div>
+
+    </div>
+
+    <!-- Choices -->
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="./pictures/rock.png">
+        </div>
+        <div class="choice" id="paper">
+            <img src="./pictures/paper.png">
+        </div>
+        <div class="choice" id="Scissor">
+            <img src="./pictures/scissor.png">
+        </div>
+    </div>
+    <p> </p>
+    <div class="choices-display">
+    <p>You chose:</p>
+    <img id="user-choice-img" src="" alt="User Choice" width="100">
+    <p> </p>
+    <p>Computer chose:</p>
+    <img id="computer-choice-img" src="" alt="Computer Choice" width="100">
+    </div>
+
+
+    <!-- Result -->
+    <p id="result"></p>
+    <p> </p>
+
+    <script src="rpc.js"></script>
+  
+<button id="exit-btn" onclick="window.location.href='score.html'">Exit to Main Page</button>
+
+
+</body>
+</html>
